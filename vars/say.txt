@@ -1,0 +1,20 @@
+Colored console messages
+
+USAGE
+pipeline {
+    agent none
+    options {
+        ansiColor('xterm')
+    }
+    stages {
+        stage ('Sample') {
+            steps {
+                script {
+                    say.info 'This is an INFO text'
+                    say.warn 'This is a WARN text'
+                    say.error 'This is an ERROR text'
+                }
+            }
+        }
+    }
+}
