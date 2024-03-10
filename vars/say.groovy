@@ -22,7 +22,7 @@ def _render(String fg, String msg) {
 Map colors = [
     reset: '\033[0m',
     blue: '\033[94;1m',
-    yellow: '\033[93;1m',
+    yellow: '\033[33;1m',
     red: '\033[91;1m',
 ];
 
