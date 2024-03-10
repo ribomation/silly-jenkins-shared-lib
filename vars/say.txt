@@ -13,6 +13,7 @@ pipeline {
                     say.info 'This is an INFO text'
                     say.warn 'This is a WARN text'
                     say.error 'This is an ERROR text'
+                    say.info "Groovy version: ${GroovySystem.version}"
                 }
             }
         }
