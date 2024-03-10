@@ -15,12 +15,17 @@ def error(String msg) {
 }
 
 def _render(String fg, String msg) {
-    echo "${fg}${msg}${colors.reset}"
+    def fmt = 'yyyy-MM-dd HH:mm:ss:sss'
+    def tz = TimeZone.getTimeZone('UTC')
+    def ts = new Date().format(fmt, tz)
+    echo "${fg}[${ts}] ${msg}${colors.reset}"
 }
+
 
 @Field
 Map colors = [
     reset: '\033[0m',
+    //fg color, white bg, bold
     blue: '\033[94;107;1m',
     yellow: '\033[33;107;1m',
     red: '\033[91;107;1m',
