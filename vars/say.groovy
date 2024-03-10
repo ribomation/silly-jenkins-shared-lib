@@ -20,8 +20,8 @@ def _render(String fg, String msg) {
 
 @Field
 Map colors = [
-    reset: '\033[0m',
-    blue: '\033[34m',
+    reset: '\u001b[0m',
+    blue: '\u001b[37m\u001b[34m',
     yellow: '\033[33m',
     red: '\033[31m',
 ];
